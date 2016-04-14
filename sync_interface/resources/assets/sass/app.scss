@@ -138,6 +138,54 @@ a {
         .breadcrumb-wrapper {
             border-bottom: 1px solid $black;
             margin: -15px -15px 0;
+            .breadcrumbs {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    background: $dark-grey;
+                    .crumb {
+                        position: relative;
+                        display: block;
+                        background: $dark-grey;
+                        float: left;
+                        padding: 10px 5px 10px 15px;
+                        list-style: none;
+                        color: $white;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        cursor: pointer;
+                        transition: all .5s;
+                        &:before {
+                            content: ' ';
+                            position: absolute;
+                            z-index: 9;
+                            top: 5px;
+                            right: -15px;
+                            background: $dark-grey;
+                            transform: rotate(-45deg);
+                            width: 30px;
+                            height: 30px;
+                            border-right: 1px solid $black;
+                            border-bottom: 1px solid $black;
+                            transition: all .5s;
+                        }
+                        &:hover {
+                            background: $light-black;
+                            &:before {
+                                background: $light-black;
+                            }
+                        }
+                        .label {
+                            position: relative;
+                            z-index: 99;
+                            font-size: 14px;
+                            opacity: 1;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
         }
         .pane-wrapper {
             overflow: hidden;
