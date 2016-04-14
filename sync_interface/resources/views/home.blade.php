@@ -17,10 +17,11 @@
                     <div class="pane-wrapper">
                         <div class="primary-pane pane">
                             <ul class="listings">
+                                <li class="heading">Directories</li>
                                 @foreach($directories as $key => $directory)
                                     <li class="directory item">{{ $directory }}</li>
                                 @endforeach
-                                <li class="divider"></li>
+                                <li class="heading">Files</li>
                                 @foreach($files as $key => $file)
                                     @if(!strpos($file, '/'))
                                         <li class="file item">{{ $file }}</li>

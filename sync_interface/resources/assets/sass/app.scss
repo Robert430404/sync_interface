@@ -12,6 +12,8 @@ $darker-grey: #2b2b2b;
 $light-black: #1b1b1b;
 $black: #000;
 
+$white-overlay: rgba(255,255,255,.25);
+
 $light-highlight: #2DCFFF;
 $highlight: #2199BD;
 $dark-highlight: #145D73;
@@ -200,7 +202,7 @@ a {
         }
         .pane-wrapper {
             overflow: hidden;
-            margin: 0 0 -15px;
+            margin: 0 -15px -15px;
             .primary-pane {
                 border-right: 1px solid $black;
             }
@@ -209,6 +211,31 @@ a {
                 width: 30%;
                 height: 100%;
                 min-height: 100px;
+                .listings {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        list-style: none;
+                        padding: 10px 15px;
+                        color: $white;
+                        cursor: pointer;
+                        transition: all .3s;
+                        &:hover {
+                            background: $white-overlay
+                        }
+                        &.divider {
+                            height: 0px;
+                            padding: 0;
+                            margin: 0;
+                            border-bottom: 1px solid $black;
+                        }
+                        &.heading {
+                            padding: 10px 15px;
+                            background: $black !important;
+                            cursor: default;
+                        }
+                    }
+                }
             }
         }
     }
