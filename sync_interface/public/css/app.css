@@ -5784,6 +5784,13 @@ a {
         background: #145D73 !important;
         color: #2199BD !important;
         font-weight: bold; }
+    .navbar-default ul li.open > a {
+      background: #145D73 !important;
+      color: #2199BD !important;
+      font-weight: bold; }
+    .navbar-default ul li .dropdown-menu {
+      background: #2199BD;
+      border-color: #000 !important; }
   .navbar-default .navbar-brand {
     text-transform: uppercase;
     font-weight: bold;

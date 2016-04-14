@@ -64,6 +64,17 @@ a {
                     font-weight: bold;
                 }
             }
+            &.open {
+                > a {
+                    background: $dark-highlight !important;
+                    color: $highlight !important;
+                    font-weight: bold;
+                }
+            }
+            .dropdown-menu {
+                background: $highlight;
+                border-color: $black !important;
+            }
         }
     }
     .navbar-brand {
