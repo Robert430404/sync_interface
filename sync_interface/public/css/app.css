@@ -5757,12 +5757,12 @@ hr {
   border-color: #000; }
 
 a {
-  color: #900;
+  color: #2199BD;
   text-decoration: none !important;
   background: transparent;
   transition: all .5s; }
   a:hover {
-    background: #900;
+    background: #2199BD;
     color: #000; }
 
 .form-group:last-child {
@@ -5772,7 +5772,7 @@ a {
   text-align: center; }
 
 .navbar-default {
-  background: #900;
+  background: #2199BD;
   border-bottom: 1px solid #000; }
   .navbar-default ul li {
     text-transform: uppercase; }
@@ -5781,8 +5781,8 @@ a {
       font-weight: 300;
       transition: all .5s; }
       .navbar-default ul li a:hover {
-        background: #400 !important;
-        color: #900 !important;
+        background: #145D73 !important;
+        color: #2199BD !important;
         font-weight: bold; }
   .navbar-default .navbar-brand {
     text-transform: uppercase;
@@ -5790,7 +5790,7 @@ a {
     color: #000;
     transition: all .5s; }
     .navbar-default .navbar-brand:hover {
-      color: #f66; }
+      color: #2DCFFF; }
 
 .panel {
   border: 1px solid #000;
@@ -5820,7 +5820,7 @@ a {
     .panel .panel-body input[type=submit],
     .panel .panel-body button {
       width: 100%;
-      background: #900;
+      background: #2199BD;
       color: #000;
       border: none;
       border-radius: 0;
@@ -5829,8 +5829,8 @@ a {
       transition: all .5s; }
       .panel .panel-body input[type=submit]:hover,
       .panel .panel-body button:hover {
-        background: #400;
-        color: #900; }
+        background: #145D73;
+        color: #2199BD; }
     .panel .panel-body .checkbox {
       font-size: 14px;
       padding: 0;
