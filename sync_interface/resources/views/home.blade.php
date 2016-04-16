@@ -24,7 +24,7 @@
                                 <li class="heading">Files</li>
                                 @foreach($files as $key => $file)
                                     @if(!strpos($file, '/'))
-                                        <li class="file item">{{ $file }}</li>
+                                        <li class="file item"><i class="fa fa-file-o"></i>{{ $file }}</li>
                                     @endif
                                 @endforeach
                             </ul>
