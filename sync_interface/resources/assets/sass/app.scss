@@ -234,6 +234,11 @@ a {
                             background: $black !important;
                             cursor: default;
                         }
+                        &.item {
+                            i {
+                                margin-right: 15px;
+                            }
+                        }
                     }
                 }
             }
