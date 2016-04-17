@@ -13,4 +13,9 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass('app.scss');
+    mix.babel([
+       'file-operations.js',
+       'folder-operations.js',
+       'main.js'
+   ]);
 });
