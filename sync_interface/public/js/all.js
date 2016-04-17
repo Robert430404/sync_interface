@@ -29,6 +29,12 @@ var folderOperations = function () {
         value: function newFolder() {
             console.log('new folder');
         }
+    }, {
+        key: 'getSelectedFolder',
+        value: function getSelectedFolder() {
+            var folderName = $(this).attr('data-folder-name');
+            console.log(folderName);
+        }
     }]);
 
     return folderOperations;
@@ -37,5 +43,9 @@ var folderOperations = function () {
 function init() {
     var folderOperations = new FolderOperations();
     var fileOperations = new FileOperations();
+
+    $('body').on('click', '.directory', function () {
+        folderOperations.getSelectedFolder();
+    });
 }
 //# sourceMappingURL=all.js.map

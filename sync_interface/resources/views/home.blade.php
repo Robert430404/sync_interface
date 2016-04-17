@@ -19,7 +19,7 @@
                             <ul class="listings">
                                 <li class="heading">Directories</li>
                                 @foreach($directories as $key => $directory)
-                                    <li class="directory item"><i class="fa fa-folder-o"></i> {{ $directory }}</li>
+                                    <li class="directory item" data-folder-name="{{ $directory }}"><i class="fa fa-folder-o"></i> {{ $directory }}</li>
                                 @endforeach
                                 <li class="heading">Files</li>
                                 @foreach($files as $key => $file)
