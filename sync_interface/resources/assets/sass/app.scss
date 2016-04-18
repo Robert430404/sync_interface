@@ -205,10 +205,13 @@ a {
             margin: 0 -15px -15px;
             .primary-pane {
                 border-right: 1px solid $black;
+                width: 30%;
+            }
+            .view-pane {
+                width: 60%;
             }
             .pane {
                 float: left;
-                width: 30%;
                 height: 100%;
                 min-height: 100px;
                 .listings {

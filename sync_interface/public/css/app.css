@@ -5898,10 +5898,12 @@ a {
       overflow: hidden;
       margin: 0 -15px -15px; }
       .panel .panel-body .pane-wrapper .primary-pane {
-        border-right: 1px solid #000; }
+        border-right: 1px solid #000;
+        width: 30%; }
+      .panel .panel-body .pane-wrapper .view-pane {
+        width: 60%; }
       .panel .panel-body .pane-wrapper .pane {
         float: left;
-        width: 30%;
         height: 100%;
         min-height: 100px; }
         .panel .panel-body .pane-wrapper .pane .listings {

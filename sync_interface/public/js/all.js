@@ -14,38 +14,50 @@ var FileOperations = function () {
         value: function newFile() {
             console.log('new file');
         }
+    }, {
+        key: 'getSelectedFile',
+        value: function getSelectedFile(file) {
+            var fileName = file.attr('data-file-name');
+
+            console.log(fileName);
+        }
     }]);
 
     return FileOperations;
 }();
 
-var folderOperations = function () {
-    function folderOperations() {
-        _classCallCheck(this, folderOperations);
+var FolderOperations = function () {
+    function FolderOperations() {
+        _classCallCheck(this, FolderOperations);
     }
 
-    _createClass(folderOperations, [{
+    _createClass(FolderOperations, [{
         key: 'newFolder',
         value: function newFolder() {
             console.log('new folder');
         }
     }, {
         key: 'getSelectedFolder',
-        value: function getSelectedFolder() {
-            var folderName = $(this).attr('data-folder-name');
+        value: function getSelectedFolder(folder) {
+            var folderName = folder.attr('data-folder-name');
+
             console.log(folderName);
         }
     }]);
 
-    return folderOperations;
+    return FolderOperations;
 }();
 
-function init() {
+window.onload = function init() {
     var folderOperations = new FolderOperations();
     var fileOperations = new FileOperations();
 
     $('body').on('click', '.directory', function () {
-        folderOperations.getSelectedFolder();
+        folderOperations.getSelectedFolder($(this));
     });
-}
+
+    $('body').on('click', '.file', function () {
+        fileOperations.getSelectedFile($(this));
+    });
+};
 //# sourceMappingURL=all.js.map

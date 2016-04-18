@@ -1,14 +1,15 @@
 
-class folderOperations
+class FolderOperations
 {
     newFolder()
     {
         console.log('new folder');
     }
 
-    getSelectedFolder()
+    getSelectedFolder(folder)
     {
-        var folderName = $(this).attr('data-folder-name');
+        var folderName = folder.attr('data-folder-name');
+
         console.log(folderName);
     }
 }
