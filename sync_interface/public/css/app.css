@@ -5752,6 +5752,9 @@ button.close {
 body {
   background: #1b1b1b; }
 
+img {
+  max-width: 100%; }
+
 hr {
   background: #000;
   border-color: #000; }
@@ -5901,7 +5904,8 @@ a {
         border-right: 1px solid #000;
         width: 30%; }
       .panel .panel-body .pane-wrapper .view-pane {
-        width: 60%; }
+        width: 70%;
+        padding: 30px; }
       .panel .panel-body .pane-wrapper .pane {
         float: left;
         height: 100%;
@@ -5928,5 +5932,32 @@ a {
               cursor: default; }
             .panel .panel-body .pane-wrapper .pane .listings li.item i {
               margin-right: 15px; }
+        .panel .panel-body .pane-wrapper .pane .image-container {
+          position: relative;
+          border-radius: 4px;
+          overflow: hidden;
+          border: 1px solid #000; }
+          .panel .panel-body .pane-wrapper .pane .image-container img {
+            display: block; }
+          .panel .panel-body .pane-wrapper .pane .image-container .caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 22px;
+            font-weight: 300; }
+        .panel .panel-body .pane-wrapper .pane .message-container {
+          background: #000;
+          border-radius: 4px;
+          padding: 30px;
+          text-align: center; }
+          .panel .panel-body .pane-wrapper .pane .message-container h2 {
+            font-size: 22px;
+            margin: 0;
+            color: #fff; }
 
 /*# sourceMappingURL=app.css.map */

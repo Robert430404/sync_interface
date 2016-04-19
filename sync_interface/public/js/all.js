@@ -18,10 +18,19 @@ var FileOperations = function () {
         key: 'getSelectedFile',
         value: function getSelectedFile(file) {
             var fileName = file.attr('data-file-name');
-            var fileType = file.attr('data-file-name');
-            // http://localhost:8000/sync-files/1455559504226.jpg
+            var fileType = file.attr('data-file-type');
+            // 1455559504226.jpg
 
-            if (fileType.indexOf('image') !== '-1') {}
+            $('.file-contents').empty();
+
+            if (fileType.indexOf('image') !== -1) {
+                $('.file-contents').append('<div class="image-container"></div>');
+                $('.file-contents .image-container').append('<h2 class="caption">' + fileName + '</h2>');
+                $('.file-contents .image-container').append('<img src="http://localhost:8000/sync-files/' + fileName + '" />');
+            } else {
+                $('.file-contents').append('<div class="message-container"></div>');
+                $('.file-contents .message-container').append('<h2 class="Message">File Type Not Supported</h2>');
+            }
         }
     }]);
 

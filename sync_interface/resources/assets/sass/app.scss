@@ -12,15 +12,22 @@ $darker-grey: #2b2b2b;
 $light-black: #1b1b1b;
 $black: #000;
 
+$black-overlay: rgba(00,00,00,.5);
 $white-overlay: rgba(255,255,255,.25);
 
 $light-highlight: #2DCFFF;
 $highlight: #2199BD;
 $dark-highlight: #145D73;
 
+$radius: 4px;
+
 // Tab CSS
 body {
     background: $light-black;
+}
+
+img {
+    max-width: 100%;
 }
 
 hr {
@@ -208,7 +215,9 @@ a {
                 width: 30%;
             }
             .view-pane {
-                width: 60%;
+                width: 70%;
+                padding: 30px;
+
             }
             .pane {
                 float: left;
@@ -242,6 +251,38 @@ a {
                                 margin-right: 15px;
                             }
                         }
+                    }
+                }
+                .image-container {
+                    position: relative;
+                    border-radius: $radius;
+                    overflow: hidden;
+                    border: 1px solid $black;
+                    img {
+                        display: block;
+                    }
+                    .caption {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        margin: 0;
+                        padding: 10px;
+                        background: $black-overlay;
+                        color: $white;
+                        font-size: 22px;
+                        font-weight: 300;
+                    }
+                }
+                .message-container {
+                    background: $black;
+                    border-radius: $radius;
+                    padding: 30px;
+                    text-align: center;
+                    h2 {
+                        font-size: 22px;
+                        margin: 0;
+                        color: $white;
                     }
                 }
             }
