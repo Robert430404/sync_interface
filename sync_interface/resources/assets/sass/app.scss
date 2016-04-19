@@ -28,6 +28,7 @@ body {
 
 img {
     max-width: 100%;
+    width: 100%;
 }
 
 hr {
@@ -290,5 +291,9 @@ a {
                 }
             }
         }
+    }
+    .files {
+        max-height: 250px;
+        overflow-y: auto
     }
 }

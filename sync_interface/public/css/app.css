@@ -5753,7 +5753,8 @@ body {
   background: #1b1b1b; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%; }
 
 hr {
   background: #000;
@@ -5961,5 +5962,8 @@ a {
             font-size: 22px;
             margin: 0;
             color: #fff; }
+  .panel .files {
+    max-height: 250px;
+    overflow-y: auto; }
 
 /*# sourceMappingURL=app.css.map */

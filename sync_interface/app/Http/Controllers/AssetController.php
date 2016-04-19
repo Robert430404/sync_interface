@@ -136,8 +136,7 @@ class AssetController extends Controller
      */
     public function loadNestedFile($directory = '', $file)
     {
-        dd($directory);
-        $filepath = $directory . $file;
+        $filepath = $directory . '/' . $file;
         $file     = Storage::get($filepath);
         $type     = Storage::mimeType($filepath);
         $response = Response::make($file, 200);
