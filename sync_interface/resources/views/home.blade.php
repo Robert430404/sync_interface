@@ -23,8 +23,8 @@
                                 @endforeach
                                 <li class="heading">Files</li>
                                 @foreach($files as $key => $file)
-                                    @if(!strpos($file, '/'))
-                                        <li class="file item" data-file-name="{{ $file }}"><i class="fa fa-file-o"></i>{{ $file }}</li>
+                                    @if(!strpos($file['file'], '/'))
+                                        <li class="file item" data-file-name="{{ $file['file'] }}" data-file-type="{{ $file['type'] }}"><i class="fa fa-file-o"></i>{{ $file['file'] }}</li>
                                     @endif
                                 @endforeach
                             </ul>

@@ -16,5 +16,5 @@ Route::auth();
 Route::get('/', 'HomeController@index');
 
 // Pull Image From Storage And Return It
-Route::get('/sync-files/{file}', 'AssetController@loadFile');
-Route::get('/sync-files/{$directory}/{file}', 'AssetController@loadNestedFile');
+Route::get('/sync-files/{file}',              'AssetController@loadFile');
+Route::get('/sync-files/{directory}/{file}', 'AssetController@loadNestedFile');

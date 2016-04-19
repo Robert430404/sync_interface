@@ -40,8 +40,9 @@ class AssetController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function loadNestedFile($directory, $file)
+    public function loadNestedFile($directory = '', $file)
     {
+        dd($directory);
         $filepath = $directory . $file;
         $file     = Storage::get($filepath);
         $type     = Storage::mimeType($filepath);

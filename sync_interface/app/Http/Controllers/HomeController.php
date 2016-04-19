@@ -27,11 +27,20 @@ class HomeController extends Controller
     {
         $files       = Storage::allFiles();
         $directories = Storage::allDirectories();
+        $filesTypes  = array();
 
-        // dd($files);
+        foreach($files as $key => $file)
+        {
+            $filesTypes[$key] = [
+                'file' => $file,
+                'type' => Storage::mimeType($file),
+            ];
+        }
+
+        // dd($filesTypes);
 
         return view('home', [
-            'files'       => $files,
+            'files'       => $filesTypes,
             'directories' => $directories,
         ]);
     }
