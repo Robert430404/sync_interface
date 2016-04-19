@@ -25,17 +25,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $files       = Storage::allFiles();
+        $files       = Storage::files();
         $directories = Storage::directories();
         $filesTypes  = array();
 
         foreach($files as $key => $file)
         {
-            $filesTypes[$key] = [
-                'file' => $file,
-                //'type' => Storage::mimeType($file),
-                'type' => 'test',
-            ];
+            if($file != 'Icon?')
+            {
+                $filesTypes[$key] = [
+                    'file' => $file,
+                    'type' => Storage::mimeType($file),
+                ];
+            }
         }
 
         // dd($filesTypes);
