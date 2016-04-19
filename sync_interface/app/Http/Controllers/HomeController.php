@@ -40,8 +40,6 @@ class HomeController extends Controller
             }
         }
 
-        // dd($filesTypes);
-
         return view('home', [
             'files'       => $filesTypes,
             'directories' => $directories,

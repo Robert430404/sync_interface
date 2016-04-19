@@ -18,14 +18,18 @@
                         <div class="primary-pane pane">
                             <ul class="listings">
                                 <li class="heading">Directories</li>
+                            </ul>
+                            <ul class="listings directories">
                                 @foreach($directories as $key => $directory)
                                     <li class="directory item" data-folder-name="{{ $directory }}"><i class="fa fa-folder-o"></i> {{ $directory }}</li>
                                 @endforeach
+                            </ul>
+                            <ul class="listings">
                                 <li class="heading">Files</li>
+                            </ul>
+                            <ul class="listings files">
                                 @foreach($files as $key => $file)
-                                    @if(!strpos($file['file'], '/'))
-                                        <li class="file item" data-file-name="{{ $file['file'] }}" data-file-type="{{ $file['type'] }}"><i class="fa fa-file-o"></i>{{ $file['file'] }}</li>
-                                    @endif
+                                    <li class="file item" data-file-name="{{ $file['file'] }}" data-file-type="{{ $file['type'] }}"><i class="fa fa-file-o"></i>{{ $file['file'] }}</li>
                                 @endforeach
                             </ul>
                         </div>

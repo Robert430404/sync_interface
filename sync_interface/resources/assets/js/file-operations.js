@@ -10,7 +10,6 @@ class FileOperations
     {
         var fileName = file.attr('data-file-name');
         var fileType = file.attr('data-file-type');
-        // 1455559504226.jpg
 
         $('.file-contents').empty();
 

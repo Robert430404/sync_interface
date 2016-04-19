@@ -20,7 +20,7 @@ class AssetController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Load Individual File From Passed Path
      *
      * @return \Illuminate\Http\Response
      */
@@ -36,7 +36,101 @@ class AssetController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Load Folders From Passed Directory
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function loadHomeFolder()
+    {
+        $directories  = Storage::directories();
+        $formatedJSON = array();
+
+        foreach($directories as $key => $folder)
+        {
+            $name = explode('/', $folder);
+
+            $formatedJSON[$key] = [
+                'path' => $folder,
+                'name' => end($name),
+            ];
+        }
+
+        return response()->json($formatedJSON);
+    }
+
+    /**
+     * Load Files From Passed Directory
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function loadHomeFiles()
+    {
+        $files        = Storage::files();
+        $formatedJSON = array();
+
+        foreach($files as $key => $file)
+        {
+            $name = explode('/', $file);
+
+            $formatedJSON[$key] = [
+                'path' => $file,
+                'type' => Storage::mimeType($file),
+                'name' => end($name),
+            ];
+        }
+
+        return response()->json($formatedJSON);
+    }
+
+    /**
+     * Load Folders From Passed Directory
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function loadDirectories($directory)
+    {
+        $directories  = Storage::directories($directory);
+        $formatedJSON = array();
+
+        foreach($directories as $key => $folder)
+        {
+            $name = explode('/', $folder);
+
+            $formatedJSON[$key] = [
+                'path' => $folder,
+                'name' => end($name),
+            ];
+        }
+
+        return response()->json($formatedJSON);
+    }
+
+    /**
+     * Load Files From Passed Directory
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function loadFiles($directory)
+    {
+        $files        = Storage::files($directory);
+        $formatedJSON = array();
+
+        foreach($files as $key => $file)
+        {
+            $name = explode('/', $file);
+
+            $formatedJSON[$key] = [
+                'path' => $file,
+                'type' => Storage::mimeType($file),
+                'name' => end($name),
+            ];
+        }
+
+        return response()->json($formatedJSON);
+    }
+
+    /**
+     * Load Nested File
      *
      * @return \Illuminate\Http\Response
      */

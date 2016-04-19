@@ -8,6 +8,10 @@ window.onload = function init()
         folderOperations.getSelectedFolder($(this));
     });
 
+    $('body').on('click', '.crumb-home', function(){
+        folderOperations.goHome($(this));
+    });
+
     $('body').on('click', '.file', function(){
         fileOperations.getSelectedFile($(this));
     });
