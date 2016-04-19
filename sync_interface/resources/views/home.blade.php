@@ -9,7 +9,7 @@
                 <div class="panel-body">
                     <div class="breadcrumb-wrapper">
                         <div class="breadcrumbs">
-                            <ul>
+                            <ul class="crumb-list">
                                 <li class="crumb-home crumb"><i class="fa fa-home"></i> <span class="label">Home</span></li>
                             </ul>
                         </div>

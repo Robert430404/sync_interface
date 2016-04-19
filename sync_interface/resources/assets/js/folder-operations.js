@@ -10,6 +10,7 @@ class FolderOperations
     {
         $.get("http://localhost:8000/sync-folders", function(response){
             $('.directories').empty();
+            $('.crumb-sub').remove();
 
             for(var directory in response)
             {
@@ -33,6 +34,7 @@ class FolderOperations
 
         $.get("http://localhost:8000/sync-folders/" + folderName, function(response){
             $('.directories').empty();
+            $('.crumb-list').append('<li class="crumb-sub crumb" data-folder-name="' + folderName + '"><i class="fa fa-folder-o"></i> <span class="label">' + folderName + '</span></li>');
 
             for(var directory in response)
             {

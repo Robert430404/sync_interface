@@ -51,6 +51,7 @@ var FolderOperations = function () {
         value: function goHome() {
             $.get("http://localhost:8000/sync-folders", function (response) {
                 $('.directories').empty();
+                $('.crumb-sub').remove();
 
                 for (var directory in response) {
                     $('.directories').append('<li class="directory item" data-folder-name="' + response[directory].path + '"><i class="fa fa-folder-o"></i>' + response[directory].name + '</li>');
@@ -72,6 +73,7 @@ var FolderOperations = function () {
 
             $.get("http://localhost:8000/sync-folders/" + folderName, function (response) {
                 $('.directories').empty();
+                $('.crumb-list').append('<li class="crumb-sub crumb" data-folder-name="' + folderName + '"><i class="fa fa-folder-o"></i> <span class="label">' + folderName + '</span></li>');
 
                 for (var directory in response) {
                     $('.directories').append('<li class="directory item" data-folder-name="' + response[directory].path + '"><i class="fa fa-folder-o"></i>' + response[directory].name + '</li>');
